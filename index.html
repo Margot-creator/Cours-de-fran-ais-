@@ -1,1 +1,682 @@
+ 
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Margot Moraga Araya | Professeure de français</title>
+
+<meta name="description" content="Découvrez Margot Moraga Araya, professeure de français avec 8 ans d'expérience auprès des enfants, des adolescents et des adultes.">
+
+<style>
+:root {
+  --blue: #173b70;
+  --red: #e94b55;
+  --yellow: #f6cf57;
+  --green: #43a889;
+  --purple: #8864b5;
+  --light: #f5f7fc;
+  --dark: #24334b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+header {
+  background: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 15px #00000010;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 22px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+.hero {
+  min-height: 590px;
+  background:
+    linear-gradient(120deg, #102b50f2, #244d7beF);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.hero-label {
+  display: inline-block;
+  background: var(--green);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: clamp(19px, 3vw, 29px);
+  color: var(--yellow);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #e2eafa;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 30px;
+  background: var(--red);
+  color: white;
+  padding: 13px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.hero-button:hover {
+  background: var(--yellow);
+  color: var(--blue);
+  transform: translateY(-3px);
+}
+
+/* Bandeau animé des pays francophones */
+
+.flag-banner {
+  background: white;
+  padding: 22px 0;
+  overflow: hidden;
+  border-bottom: 4px solid var(--yellow);
+}
+
+.flag-track {
+  display: flex;
+  width: max-content;
+  animation: defilement 28s linear infinite;
+}
+
+.flag-group {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding-right: 38px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.flag-group span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.flag-group b {
+  font-size: 31px;
+}
+
+@keyframes defilement {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Sections */
+
+section {
+  padding: 85px 8%;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--blue);
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #718096;
+  margin-bottom: 45px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-decoration {
+  min-height: 300px;
+  background: linear-gradient(135deg,
+    var(--blue), var(--purple), var(--red));
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 90px;
+  box-shadow: 0 15px 35px #173b7030;
+}
+
+.about-text h3 {
+  color: var(--blue);
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #526176;
+}
+
+.experience {
+  display: inline-block;
+  background: #fff0cf;
+  color: #79520c;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Cours */
+
+.courses {
+  background: white;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.course-card {
+  padding: 35px 25px;
+  background: var(--light);
+  border-radius: 18px;
+  text-align: center;
+  border-bottom: 5px solid var(--green);
+  transition: .3s;
+}
+
+.course-card:nth-child(2) {
+  border-color: var(--red);
+}
+
+.course-card:nth-child(3) {
+  border-color: var(--purple);
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px #00000012;
+}
+
+.course-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+/* Valeurs */
+
+.values {
+  background: linear-gradient(120deg, #173b70, #302b60);
+  color: white;
+  text-align: center;
+}
+
+.values .section-title {
+  color: white;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.value-item {
+  padding: 20px;
+  min-width: 150px;
+}
+
+.value-item span {
+  display: block;
+  font-size: 36px;
+}
+
+.value-item p {
+  font-weight: bold;
+}
+
+/* Contact */
+
+.contact {
+  text-align: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 25px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px #0000000d;
+}
+
+.contact-box h3 {
+  color: var(--blue);
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.contact-button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+footer {
+  background: #102744;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.footer-colors {
+  display: flex;
+  height: 6px;
+}
+
+.footer-colors span {
+  flex: 1;
+}
+
+.reveal {
+  animation: apparition 1s ease both;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-decoration {
+    min-height: 200px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 60px 7%;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MM · Français</div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#cours">Mes cours</a>
+    <a href="#valeurs">Ma philosophie</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ACCUEIL -->
+
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-content reveal">
+
+    <div class="hero-label">
+      ENSEIGNEMENT DU FRANÇAIS
+    </div>
+
+    <h1>Margot Moraga Araya</h1>
+
+    <h2>Le français, une langue qui nous rapproche.</h2>
+
+    <p>
+      Apprendre une langue, découvrir une culture,
+      ouvrir de nouvelles portes sur le monde.
+    </p>
+
+    <a href="#apropos" class="hero-button">
+      Découvrez mon univers
+    </a>
+
+  </div>
+</section>
+
+<!-- BANDEAU FRANCOPHONE -->
+
+<div class="flag-banner">
+  <div class="flag-track">
+
+    <div class="flag-group">
+      <span><b>🇫🇷</b> France</span>
+      <span><b>🇨🇦</b> Canada</span>
+      <span><b>🇧🇪</b> Belgique</span>
+      <span><b>🇨🇭</b> Suisse</span>
+      <span><b>🇸🇳</b> Sénégal</span>
+      <span><b>🇨🇮</b> Côte d'Ivoire</span>
+      <span><b>🇲🇦</b> Maroc</span>
+      <span><b>🇨🇩</b> RD Congo</span>
+      <span><b>🇭🇹</b> Haïti</span>
+      <span><b>🇱🇺</b> Luxembourg</span>
+      <span><b>🇨🇷</b> Costa Rica</span>
+    </div>
+
+    <div class="flag-group" aria-hidden="true">
+      <span><b>🇫🇷</b> France</span>
+      <span><b>🇨🇦</b> Canada</span>
+      <span><b>🇧🇪</b> Belgique</span>
+      <span><b>🇨🇭</b> Suisse</span>
+      <span><b>🇸🇳</b> Sénégal</span>
+      <span><b>🇨🇮</b> Côte d'Ivoire</span>
+      <span><b>🇲🇦</b> Maroc</span>
+      <span><b>🇨🇩</b> RD Congo</span>
+      <span><b>🇭🇹</b> Haïti</span>
+      <span><b>🇱🇺</b> Luxembourg</span>
+      <span><b>🇨🇷</b> Costa Rica</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- À PROPOS -->
+
+<section id="apropos">
+  <h2 class="section-title">À propos de moi</h2>
+  <p class="section-subtitle">
+    Une passion pour la langue française et son enseignement.
+  </p>
+
+  <div class="about">
+
+    <div class="about-decoration">
+      <span>📚</span>
+    </div>
+
+    <div class="about-text">
+      <h3>Bonjour, je suis Margot !</h3>
+
+      <p>
+        Je m'appelle Margot Moraga Araya et je suis
+        professeure de français.
+      </p>
+
+      <p>
+        Depuis 8 ans, je me consacre à l'enseignement
+        de la langue française auprès des enfants,
+        des adolescents et des adultes.
+      </p>
+
+      <p>
+        Je considère l'apprentissage d'une langue
+        comme une expérience enrichissante qui
+        permet de communiquer, de découvrir
+        différentes cultures et de créer des liens
+        avec le monde.
+      </p>
+
+      <p>
+        Mon objectif est de proposer un environnement
+        d'apprentissage motivant, bienveillant et
+        adapté aux besoins de chaque apprenant.
+      </p>
+
+      <div class="experience">
+        ✨ 8 ans d'expérience dans l'enseignement
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MES COURS -->
+
+<section class="courses" id="cours">
+
+  <h2 class="section-title">Mes cours</h2>
+
+  <p class="section-subtitle">
+    Le français pour tous les âges et tous les niveaux.
+  </p>
+
+  <div class="course-grid">
+
+    <div class="course-card">
+      <div class="course-icon">🧸</div>
+      <h3>Enfants</h3>
+      <p>
+        Apprendre le français de manière ludique
+        grâce aux jeux, aux chansons, aux histoires
+        et aux activités créatives.
+      </p>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">🎓</div>
+      <h3>Adolescents</h3>
+      <p>
+        Développer les compétences linguistiques,
+        la confiance en soi et la communication
+        à travers des activités dynamiques.
+      </p>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">🌍</div>
+      <h3>Adultes</h3>
+      <p>
+        Apprendre le français pour voyager,
+        travailler, étudier ou simplement
+        réaliser un projet personnel.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PHILOSOPHIE -->
+
+<section class="values" id="valeurs">
+
+  <h2 class="section-title">Ma philosophie pédagogique</h2>
+
+  <p>
+    Chaque apprenant est unique.
+    Apprendre doit être une expérience positive,
+    stimulante et pleine de découvertes.
+  </p>
+
+  <div class="values-grid">
+
+    <div class="value-item">
+      <span>💡</span>
+      <p>Créativité</p>
+    </div>
+
+    <div class="value-item">
+      <span>❤️</span>
+      <p>Bienveillance</p>
+    </div>
+
+    <div class="value-item">
+      <span>🤝</span>
+      <p>Confiance</p>
+    </div>
+
+    <div class="value-item">
+      <span>🌎</span>
+      <p>Ouverture culturelle</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2 class="section-title">Restons en contact !</h2>
+
+  <p class="section-subtitle">
+    Envie de découvrir la langue française ?
+    Commençons ensemble cette belle aventure !
+  </p>
+
+  <div class="contact-box">
+
+    <h3>Bienvenue dans mon univers francophone !</h3>
+
+    <p>
+      Je serais ravie de partager avec vous
+      ma passion pour la langue et la culture françaises.
+    </p>
+
+    <a class="contact-button"
+       href="mailto:">
+      Me contacter
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- PIED DE PAGE -->
+
+<div class="footer-colors">
+  <span style="background:#43a889"></span>
+  <span style="background:#f6cf57"></span>
+  <span style="background:#8864b5"></span>
+  <span style="background:#e94b55"></span>
+  <span style="background:#173b70"></span>
+</div>
+
+<footer>
+  <p><strong>Margot Moraga Araya</strong></p>
+  <p>Professeure de français · Passionnée par la francophonie</p>
+  <p>© 2026 · Tous droits réservés</p>
+  <p>Fait avec passion pour la langue française ❤️</p>
+</footer>
+
+</body>
+</html>
